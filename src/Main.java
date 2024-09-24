@@ -12,11 +12,11 @@ public class Main {
         }
         if (cache.containsKey(n)) {
             return cache.get(n);
+        }else {
+            long fib = fibonacci(n - 1) + fibonacci(n - 2);
+            cache.put(n, fib);
+            return fib;
         }
-
-        long fib= fibonacci(n - 1) + fibonacci(n - 2) ;
-        cache.put(n, fib);
-        return fib;
     }
 
     public static void main(String[] args) {
