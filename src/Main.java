@@ -4,7 +4,7 @@ import java.util.HashMap;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
 
-    static HashMap<Integer, Long> cache;
+    static HashMap<Integer, Long> cache = new HashMap<Integer, Long>();
 
     static long fibonacci(int n) {
         if (n <= 1) {
@@ -14,7 +14,9 @@ public class Main {
             return cache.get(n);
         }
 
-        long fib = fibonacci(n - 1) + fibonacci(n - 2);
+        long fib= fibonacci(n - 1) + fibonacci(n - 2) ;
+        cache.put(n, fib);
+        return fib;
     }
 
     public static void main(String[] args) {
@@ -27,7 +29,7 @@ public class Main {
 
 
 
-            jhghghfhgfgfj
+
         }
     }
 }
